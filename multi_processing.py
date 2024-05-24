@@ -31,12 +31,24 @@ if __name__ == '__main__':
     
     print(p.is_alive()) # check now process run or not
 
-    # p.join() # finish process after run continue programe
-    # p1.join()
-    # p2.join()
+    p.terminate() # send sinal for stop process p 
+    
+    p.join() # finish process after run continue programe
+    p1.join()
+    p2.join()
 
     print(p1.is_alive()) # check now process run or not
 
+    print(p.exitcode)
+    """
+    p.exitcode return number:
+     0 ---> process complete
+     more than 0  ----> process error
+     less than 0 ----> process get signal with terminate or another thing 
+
+                 -9 --> signal kill
+                 -15 --> signal terminate
+    """
     end = time.perf_counter()
 
 
