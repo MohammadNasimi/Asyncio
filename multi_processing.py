@@ -3,7 +3,7 @@ from multiprocessing import Process,current_process
 import time 
 
 import os
-
+import sys
 
 def show (name:str):
     print(f"starting  game {name}")
@@ -20,10 +20,10 @@ def show (name:str):
 if __name__ == '__main__':    
     start = time.perf_counter()
 
-    p = Process(target=show, args=('hassan',),name = "hassan process")
-    p1 = Process(target=show, args=('mmad',))
-    p2 = Process(target=show, args=('ali',))
-
+    p = Process(target=show, args=('hassan',),name = "hassan process",daemon =True)
+    p1 = Process(target=show, args=('mmad',),daemon =True)
+    p2 = Process(target=show, args=('ali',),daemon =True)
+    # daemon ignore finish process , important you need remove join for use daemon
 
     p.start()
     p1.start()
@@ -31,9 +31,9 @@ if __name__ == '__main__':
     
     print(p.is_alive()) # check now process run or not
 
-    p.join() # finish process after run continue programe
-    p1.join()
-    p2.join()
+    # p.join() # finish process after run continue programe
+    # p1.join()
+    # p2.join()
 
     print(p1.is_alive()) # check now process run or not
 
@@ -43,3 +43,5 @@ if __name__ == '__main__':
     run_time = end - start
 
     print(run_time)
+
+    sys.exit()
