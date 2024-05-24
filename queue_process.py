@@ -35,4 +35,5 @@ if __name__ == '__main__':
                 []
             process have split memory ---> we can connect memeory process with values and array 
         after use Queue 
+        [1, 2, 3, 4, 5, 6]
     """ 
