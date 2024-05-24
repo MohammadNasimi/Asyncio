@@ -1,4 +1,4 @@
-from multiprocessing import Process
+from multiprocessing import Process,current_process
 
 import time 
 
@@ -9,6 +9,7 @@ def show (name:str):
     print(f"starting  game {name}")
     time.sleep(3)
     print(f"Ending  game {name}")
+    print(current_process())
 
 
 # show("hassan")
