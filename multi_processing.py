@@ -31,6 +31,7 @@ if __name__ == '__main__':
     
     print(p.is_alive()) # check now process run or not
 
+    # p.kill() # send sinal for stop process p 
     p.terminate() # send sinal for stop process p 
     
     p.join() # finish process after run continue programe
@@ -39,6 +40,7 @@ if __name__ == '__main__':
 
     print(p1.is_alive()) # check now process run or not
 
+    print(p.exitcode)
     print(p.exitcode)
     """
     p.exitcode return number:
