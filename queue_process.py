@@ -24,3 +24,11 @@ if __name__ == '__main__':
     p1.join()
     p2.join()
     print(num)
+    
+    
+    """result:
+                [1, 2, 3]
+                [4, 5, 6]
+                []
+            process have split memory ---> we can connect memeory process with values and array 
+    """ 
