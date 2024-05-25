@@ -9,14 +9,14 @@ def show(name):
 
 start = perf_counter()
 
-t1 = Thread(target=show,args=('hassan',))
-t2 = Thread(target=show,args=('mmad',))
+t1 = Thread(target=show,args=('hassan',),daemon=True)
+t2 = Thread(target=show,args=('mmad',),daemon=True)
 
 t1.start()  
 t2.start() 
 
-t1.join() # wait until thead terminate 
-t2.join()
+# t1.join() # wait until thead terminate 
+# t2.join()
 
 end = perf_counter()
 print(end -start)
