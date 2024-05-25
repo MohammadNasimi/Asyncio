@@ -18,5 +18,8 @@ t2.start()
 # t1.join() # wait until thead terminate 
 # t2.join()
 
+print(t1.isDaemon())
+print(t2.isDaemon())
+
 end = perf_counter()
 print(end -start)
