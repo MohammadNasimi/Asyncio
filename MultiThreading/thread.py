@@ -12,6 +12,10 @@ start = perf_counter()
 t1 = Thread(target=show,args=('hassan',),daemon=True)
 t2 = Thread(target=show,args=('mmad',),daemon=True)
 
+
+print(t1.isDaemon(True))
+print(t2.isDaemon(True))
+
 t1.start()  
 t2.start() 
 
